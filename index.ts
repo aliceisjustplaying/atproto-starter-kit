@@ -20,14 +20,14 @@ await agent.post({
     {
       index: { start: bleet.indexOf('>>>') + 3, end: bleet.indexOf('<<<') },
       type: 'link',
-      value: 'https://github.com/aliceisjustplaying/bluesky-starter-kit',
+      value: 'https://github.com/aliceisjustplaying/atproto-starter-kit',
     },
   ],
   embed: {
     $type: 'app.bsky.embed.external',
     external: {
-      uri: 'https://github.com/aliceisjustplaying/bluesky-starter-kit',
-      title: "alice's bluesky starter kit",
+      uri: 'https://github.com/aliceisjustplaying/atproto-starter-kit',
+      title: "alice's atproto starter kit",
       description: "i'm just playing around with the api",
     },
   },
