@@ -13,7 +13,7 @@ await agent.login({
   password: process.env.BSKY_PASSWORD!,
 });
 
-const bleet = 'You can find the code for this bleet >>>here<<<, now with a link card, a title and a description!';
+const bleet = 'You can find the code for this bleet >>>here<<<, with a link card, a title and a description!';
 await agent.post({
   text: bleet,
   entities: [
