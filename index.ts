@@ -16,12 +16,16 @@ await agent.login({
 const bleet = 'You can find the code for this bleet >>>here<<<, with a link card, a title and a description!';
 await agent.post({
   text: bleet,
-  entities: [
+  facets: [
     {
-      index: { start: bleet.indexOf('>>>') + 3, end: bleet.indexOf('<<<') },
-      type: 'link',
-      value: 'https://github.com/aliceisjustplaying/atproto-starter-kit',
-    },
+      index: { byteStart: bleet.indexOf('>>>') + 3, byteEnd: bleet.indexOf('<<<') },
+      features: [
+        {
+          $type: "app.bsky.richtext.facet#link",
+          uri: 'https://github.com/aliceisjustplaying/atproto-starter-kit',
+        }
+      ]
+    }
   ],
   embed: {
     $type: 'app.bsky.embed.external',
