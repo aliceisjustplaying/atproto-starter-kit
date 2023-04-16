@@ -21,7 +21,7 @@ await agent.post({
       index: { byteStart: bleet.indexOf('>>>') + 3, byteEnd: bleet.indexOf('<<<') },
       features: [
         {
-          $type: "app.bsky.richtext.facet#link",
+          $type: 'app.bsky.richtext.facet#link',
           uri: 'https://github.com/aliceisjustplaying/atproto-starter-kit',
         }
       ]
